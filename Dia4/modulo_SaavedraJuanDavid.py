@@ -35,6 +35,7 @@ def ejecutar_programa():
     ["Vladimir"]
     ]
     
+    
     apellidos = [
     ["Quintero", "Pinzón"],
     ["Pinzón", "Alvarez"],
@@ -69,7 +70,8 @@ def ejecutar_programa():
     ["Bastos", "Garcia"],
     ["Diaz", "Contreras"]
     ]
-    
+
+
     while True:
         print("\nBienvenido al programa de lista de estudiantes")
         print("1. Agregar estudiante")
@@ -92,6 +94,7 @@ def ejecutar_programa():
         else:
             print("Opción inválida.")
 
+
 def agregar_estudiante(nombres, apellidos):
     n1 = input("Ingrese el primer nombre del estudiante: ")
     n2 = input("Ingrese el segundo nombre (si lo tiene): ")
@@ -100,9 +103,13 @@ def agregar_estudiante(nombres, apellidos):
     nombres.append([n1, n2])
     apellidos.append([ap1, ap2])
 
+
+
 def ver_estudiantes(nombres, apellidos):
     for i, (nombre, apellido) in enumerate(zip(nombres, apellidos), 1):
         print(f"Estudiante #{i}: {' '.join(nombre)} {' '.join(apellido)}")
+
+
 
 def editar_estudiante(nombres, apellidos):
     ver_estudiantes(nombres, apellidos)
@@ -123,6 +130,8 @@ def editar_estudiante(nombres, apellidos):
     else:
         print("Número inválido.")
 
+
+
 def eliminar_estudiante(nombres, apellidos):
     ver_estudiantes(nombres, apellidos)
     el = int(input("Ingrese el número del estudiante a eliminar: ")) - 1
@@ -131,6 +140,8 @@ def eliminar_estudiante(nombres, apellidos):
         apellidos.pop(el)
     else:
         print("Número inválido.")
+
+
 
 if __name__ == "__main__":
     ejecutar_programa()
